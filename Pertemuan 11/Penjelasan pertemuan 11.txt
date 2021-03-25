@@ -1,0 +1,32 @@
+PENJELASAN E LEARNING TUGAS PERTEMUAN 11 MEMBUAT BUKU TAMU
+
+penjelasan ini saya buat sendiri sesuai pengetahuan dan implementasi yang telah saya lakukan
+
+saya sudah membuat database bernama buku_tamu dan nama tabel tamu didalam database tersebut berisi field2 berikut:
+field id dengan tipe data integer yang auto increment(otomatis looping nomor ketika input data)
+field nama_tamu bertipe data varchar dengan 80 character
+field email_tamu bertipe data varchar 100 character untuk digunakan user sebagai input email
+field alamat_tamu bertipe data varchar 100 character yang digunakan sebagai input alamat oleh user
+field kota_tamu bertipe data varchar 100 character yang digunakan sebagai input daerah/kota 
+field pesan bertipe data text dimana nanti berguna sebagai input pesan oleh user
+
+saya membuat 4 file php yang terdiri dari :
+
+
+Index.php {
+	berisi form untuk input dimana didalam file ini ada beberapa 
+	form input text HTML yang mana nanti digunakan sebagai perantar untuk input data ke database 
+}
+Koneksi.php{
+	di file koneksi berisi mysqli_connect dimana berfungsi untuk menghubungkan database mysqli dengan php
+}
+Simpan.php {
+	berisi sintax dimana didalam file ini ada query mysqli yaitu 
+	insert into tamu values() yang berfungsi untuk menambah data ke dalam database dan ada fungsi if dimana jika data 
+	berhasil input maka akan mengeluarkan output tulisan berwarna merah dengan keterangan berhasil diinput dan 
+	jika gagal diinput akan muncul output error dimana nanti diberitahu oleh mysqli_error dimana kesalahannya
+}
+tampilkan.php {
+	difile ini berisi sintax php untuk menampilkan data/ mengambil data dan menampilkan nya dibrowser dengan 
+	perintah mysqli_query("Select * from tamu order by ID asc") dimana perintah tersebut berarti untuk menampilkan data dari database secara ascending
+}
